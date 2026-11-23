@@ -1,0 +1,6 @@
+import { ArrowUpRight, FileText } from 'lucide-react';
+import type { projects } from '../data/portfolio';
+type Project = (typeof projects)[number];
+export default function ProjectCard({ project }: { project: Project }) {
+  return <article className="project-card"><div className="project-top"><span className="project-index">01 / CASE STUDY</span><span className="project-type">{project.category}</span></div><div className="project-visual" aria-hidden="true"><div className="visual-grid"><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/></div><div className="visual-chart"><i/><i/><i/><i/><i/><i/><i/></div><div className="visual-kpi"><small>REPORTING</small><b>BI</b><span>Analytics</span></div></div><div className="project-copy"><span className="eyebrow">{project.role}</span><h3>{project.title}</h3><p>{project.summary}</p><div className="tag-list">{project.tools.map(tool=><span key={tool}>{tool}</span>)}</div><a className="text-link" href={project.doc}><FileText size={16}/> Read project documentation <ArrowUpRight size={16}/></a></div></article>;
+}

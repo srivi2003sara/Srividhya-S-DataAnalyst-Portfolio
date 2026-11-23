@@ -1,0 +1,4 @@
+import SectionHeading from '../components/SectionHeading';
+import ProjectCard from '../components/ProjectCard';
+import { projects } from '../data/portfolio';
+export default function Projects() { return <section id="projects" className="section-shell section-block"><SectionHeading eyebrow="SELECTED WORK" title="Projects & case studies" description="A closer look at the reporting and analytics work described in my experience."/><div className="projects-grid">{projects.map(project=><ProjectCard key={project.id} project={project}/>)}</div><p className="project-note">More project case studies can be added as supporting documentation and shareable links are finalised.</p></section>; }

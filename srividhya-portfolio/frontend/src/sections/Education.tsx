@@ -1,0 +1,4 @@
+import { GraduationCap } from 'lucide-react';
+import SectionHeading from '../components/SectionHeading';
+import { education, languages } from '../data/portfolio';
+export default function Education() { return <section id="education" className="section-shell section-block"><SectionHeading eyebrow="ACADEMIC BACKGROUND" title="Education & more" description="Academic foundation in computer science and applications."/><div className="education-grid">{education.map(item=><article className="education-card" key={item.institution}><span className="education-icon"><GraduationCap size={20}/></span><span className="eyebrow">{item.period}</span><h3>{item.qualification}</h3><h4>{item.institution}</h4><p>{item.location}</p></article>)}</div><div className="languages-row"><span className="eyebrow">LANGUAGES</span><div className="tag-list">{languages.map(lang=><span key={lang}>{lang}</span>)}</div></div></section>; }

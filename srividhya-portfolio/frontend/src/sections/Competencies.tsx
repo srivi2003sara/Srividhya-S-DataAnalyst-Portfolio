@@ -1,0 +1,3 @@
+import SectionHeading from '../components/SectionHeading';
+import { competencies } from '../data/portfolio';
+export default function Competencies() { return <section className="section-shell section-block compact-block"><SectionHeading eyebrow="HOW I ADD VALUE" title="Core competencies"/><div className="competency-list">{competencies.map((item,i)=><span key={item}><b>{String(i+1).padStart(2,'0')}</b>{item}</span>)}</div></section>; }

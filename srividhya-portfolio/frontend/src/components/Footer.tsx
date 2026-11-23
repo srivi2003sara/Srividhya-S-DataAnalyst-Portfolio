@@ -1,0 +1,3 @@
+import { ArrowUpRight, Heart } from 'lucide-react';
+import { profile } from '../data/portfolio';
+export default function Footer() { return <footer className="footer section-shell"><span>© {new Date().getFullYear()} {profile.name}. Built with care.</span><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14}/></a><span>Designed for clarity <Heart size={13}/></span></footer>; }

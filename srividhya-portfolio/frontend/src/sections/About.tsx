@@ -1,0 +1,6 @@
+import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import SectionHeading from '../components/SectionHeading';
+import { profile } from '../data/portfolio';
+export default function About() {
+  return <section id="about" className="section-shell section-block"><SectionHeading eyebrow="A LITTLE ABOUT ME" title="Curious by nature. Analytical by approach." description={profile.intro}/><div className="about-grid"><div className="about-main"><p>I'm a Data Analyst with experience in business intelligence, data analysis, reporting and dashboard development. I enjoy translating business requirements into useful data solutions  from preparing and validating data to modelling it and presenting findings clearly.</p><p>My work has involved Power BI, Tableau, SQL, Python and cloud-based data tools. I value accuracy, clear documentation and collaboration throughout the reporting process.</p><a className="text-link" href={profile.linkedin} target="_blank" rel="noreferrer">Connect on LinkedIn <ArrowUpRight size={16}/></a></div><div className="about-points">{['Business-focused analysis','Reliable data preparation & validation','Clear dashboards and reporting','Documentation and collaboration'].map(t=><div key={t}><CheckCircle2 size={17}/><span>{t}</span></div>)}</div></div></section>;
+}
